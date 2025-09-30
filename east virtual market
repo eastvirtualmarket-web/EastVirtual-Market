@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EAST VIRTUAL MARKET</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background: #34495e;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0; margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    nav li {
+      position: relative;
+    }
+    nav a {
+      display: block;
+      padding: 1rem;
+      color: #fff;
+      text-decoration: none;
+    }
+    nav li:hover {
+      background: #2c3e50;
+    }
+    nav ul ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #2c3e50;
+      min-width: 200px;
+      z-index: 10;
+    }
+    nav ul li:hover > ul {
+      display: block;
+    }
+    .section {
+      padding: 2rem;
+    }
+    .section h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 0.5rem;
+      font-size: 1.1rem;
+      color: #2c3e50;
+    }
+    .card p {
+      margin: 0.5rem;
+      font-size: 0.9rem;
+    }
+    footer {
+      text-align: center;
+      background: #2c3e50;
+      color: #fff;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>EAST VIRTUAL MARKET</h1>
+    <p>Your One-Stop Online Marketplace</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#shopping">Shopping</a>
+        <ul>
+          <li><a href="#agri">Agriculture</a></li>
+          <li><a href="#fashion">Fashion & Styles</a></li>
+          <li><a href="#electronics">Electronics</a></li>
+        </ul>
+      </li>
+      <li><a href="#plots">Plots & Houses</a>
+        <ul>
+          <li><a href="#rent">House for Rent</a></li>
+          <li><a href="#house-sale">House for Sale</a></li>
+          <li><a href="#plot-sale">Plot for Sale</a></li>
+        </ul>
+      </li>
+      <li><a href="#personal">Personal Services</a>
+        <ul>
+          <li><a href="#driver">Driver</a></li>
+          <li><a href="#webdesign">Web Design</a></li>
+          <li><a href="#water">Water Supply</a></li>
+          <li><a href="#barber">Umukwaferi (Barber)</a></li>
+        </ul>
+      </li>
+      <li><a href="#hotel">Hotel & Restaurant</a>
+        <ul>
+          <li><a href="#hotel-room">Hotel</a></li>
+          <li><a href="#restaurant">Restaurant</a></li>
+          <li><a href="#bar">Bar</a></li>
+        </ul>
+      </li>
+      <li><a href="#finance">Financial Services</a>
+        <ul>
+          <li><a href="#bank">Banks</a></li>
+          <li><a href="#tax">Tax Dealers</a></li>
+          <li><a href="#consultancy">Consultancy</a></li>
+        </ul>
+      </li>
+      <li><a href="#wedding">Wedding & Ceremonies</a>
+        <ul>
+          <li><a href="#makeup">Makeup</a></li>
+          <li><a href="#hall">Wedding Hall</a></li>
+          <li><a href="#tent">Tent</a></li>
+          <li><a href="#mc">MC</a></li>
+          <li><a href="#photography">Photography</a></li>
+        </ul>
+      </li>
+      <li><a href="#transport">Transport</a>
+        <ul>
+          <li><a href="#taxi">Taxi</a></li>
+          <li><a href="#moto">Moto</a></li>
+          <li><a href="#bicycle">Abanyonzi</a></li>
+        </ul>
+      </li>
+      <li><a href="#art">Art & Furniture</a>
+        <ul>
+          <li><a href="#painting">Art</a></li>
+          <li><a href="#furniture">Furniture</a></li>
+        </ul>
+      </li>
+      <li><a href="#jobs">Job Vacancies</a></li>
+      <li><a href="#sports">Sports</a>
+        <ul>
+          <li><a href="#football">Football</a></li>
+          <li><a href="#gym">Gym</a></li>
+          <li><a href="#swimming">Swimming</a></li>
+        </ul>
+      </li>
+      <li><a href="#education">Education</a>
+        <ul>
+          <li><a href="#driving-school">Driving Schools</a></li>
+          <li><a href="#private-school">Private Schools</a></li>
+        </ul>
+      </li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Shopping -->
+  <section id="shopping" class="section">
+    <h2>Shopping</h2>
+    <div class="cards">
+      <div class="card" id="agri">
+        <img src="https://via.placeholder.com/400x200?text=Fresh+Tomatoes" alt="Tomatoes"/>
+        <h3>Fresh Tomatoes</h3>
+        <p>Organic tomatoes from local farmers.</p>
+      </div>
+      <div class="card" id="fashion">
+        <img src="https://via.placeholder.com/400x200?text=Designer+Dress" alt="Dress"/>
+        <h3>Designer Dress</h3>
+        <p>Elegant and modern fashion wear.</p>
+      </div>
+      <div class="card" id="electronics">
+        <img src="https://via.placeholder.com/400x200?text=Laptop" alt="Laptop"/>
+        <h3>Laptop</h3>
+        <p>High-performance laptop for work and study.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plots & Houses -->
+  <section id="plots" class="section">
+    <h2>Plots & Houses</h2>
+    <div class="cards">
+      <div class="card" id="rent">
+        <img src="https://via.placeholder.com/400x200?text=Apartment+for+Rent" alt="Apartment"/>
+        <h3>Apartment for Rent</h3>
+        <p>2-bedroom apartment in Kigali city center.</p>
+      </div>
+      <div class="card" id="house-sale">
+        <img src="https://via.placeholder.com/400x200?text=Modern+Villa" alt="Villa"/>
+        <h3>Modern Villa</h3>
+        <p>Luxury villa with 4 bedrooms and swimming pool.</p>
+      </div>
+      <div class="card" id="plot-sale">
+        <img src="https://via.placeholder.com/400x200?text=Commercial+Plot" alt="Plot"/>
+        <h3>Commercial Plot</h3>
+        <p>500 sqm plot for business development.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Personal Services -->
+  <section id="personal" class="section">
+    <h2>Personal Services</h2>
+    <div class="cards">
+      <div class="card" id="driver">
+        <img src="https://via.placeholder.com/400x200?text=Professional+Driver" alt="Driver"/>
+        <h3>Professional Driver</h3>
+        <p>Hire experienced and safe drivers.</p>
+      </div>
+      <div class="card" id="webdesign">
+        <img src="https://via.placeholder.com/400x200?text=Web+Design" alt="Web Design"/>
+        <h3>Web Design</h3>
+        <p>Modern websites for businesses and personal brands.</p>
+      </div>
+      <div class="card" id="water">
+        <img src="https://via.placeholder.com/400x200?text=Water+Delivery" alt="Water"/>
+        <h3>Water Delivery</h3>
+        <p>Clean water tank supply service.</p>
+      </div>
+      <div class="card" id="barber">
+        <img src="https://via.placeholder.com/400x200?text=Haircut" alt="Barber"/>
+        <h3>Umukwaferi (Barber)</h3>
+        <p>Professional haircut and grooming services.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hotel & Restaurant -->
+  <section id="hotel" class="section">
+    <h2>Hotel & Restaurant</h2>
+    <div class="cards">
+      <div class="card" id="hotel-room">
+        <img src="https://via.placeholder.com/400x200?text=Hotel+Room" alt="Hotel"/>
+        <h3>Luxury Hotel Room</h3>
+        <p>Comfortable rooms with free breakfast.</p>
+      </div>
+      <div class="card" id="restaurant">
+        <img src="https://via.placeholder.com/400x200?text=Restaurant" alt="Restaurant"/>
+        <h3>Local Buffet Meal</h3>
+        <p>Tasty meals with traditional flavors.</p>
+      </div>
+      <div class="card" id="bar">
+        <img src="https://via.placeholder.com/400x200?text=Cocktail+Lounge" alt="Bar"/>
+        <h3>Cocktail Lounge</h3>
+        <p>Refreshing drinks in a cozy bar environment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Financial Services -->
+  <section id="finance" class="section">
+    <h2>Financial Services</h2>
+    <div class="cards">
+      <div class="card" id="bank">
+        <img src="https://via.placeholder.com/400x200?text=Bank+Service" alt="Bank"/>
+        <h3>Bank Account</h3>
+        <p>Secure savings and checking accounts.</p>
+      </div>
+      <div class="card" id="tax">
+        <img src="https://via.placeholder.com/400x200?text=Tax+Services" alt="Tax"/>
+        <h3>Tax Filing</h3>
+        <p>Professional tax filing and support.</p>
+      </div>
+      <div class="card" id="consultancy">
+        <img src="https://via.placeholder.com/400x200?text=Business+Consultancy" alt="Consultancy"/>
+        <h3>Business Consultancy</h3>
+        <p>Expert advice for startups and businesses.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wedding & Ceremonies -->
+  <section id="wedding" class="section">
+    <h2>Wedding & Ceremonies</h2>
+    <div class="cards">
+      <div class="card" id="makeup">
+        <img src="https://via.placeholder.com/400x200?text=Bridal+Makeup" alt="Makeup"/>
+        <h3>Bridal Makeup</h3>
+        <p>Professional bridal makeup packages.</p>
+      </div>
+      <div class="card" id="hall">
+        <img src="https://via.placeholder.com/400x200?text=Wedding+Hall" alt="Hall"/>
+        <h3>Wedding Hall</h3>
+        <p>Spacious halls for your big day.</p>
+      </div>
+      <div class="card" id="tent">
+        <img src="https://via.placeholder.com/400x200?text=Wedding+Tent" alt="Tent"/>
+        <h3>Wedding Tent</h3>
+        <p>Quality tents for outdoor events.</p>
+      </div>
+      <div class="card" id="mc">
+        <img src="https://via.placeholder.com/400x200?text=Master+of+Ceremony" alt="MC"/>
+        <h3>Master of Ceremony</h3>
+        <p>Engaging MCs to make your event lively.</p>
+      </div>
+      <div class="card" id="photography">
+        <img src="https://via.placeholder.com/400x200?text=Wedding+Photography" alt="Photography"/>
+        <h3>Wedding Photography</h3>
+        <p>Capture every special moment professionally.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transport -->
+  <section id="transport" class="section">
+    <h2>Transport</h2>
+    <div class="cards">
+      <div class="card" id="taxi">
+        <img src="https://via.placeholder.com/400x200?text=Taxi+Service" alt="Taxi"/>
+        <h3>City Taxi</h3>
+        <p>Safe and reliable taxi rides.</p>
+      </div>
+      <div class="card" id="moto">
+        <img src="https://via.placeholder.com/400x200?text=Moto+Taxi" alt="Moto"/>
+        <h3>Moto Taxi</h3>
+        <p>Quick and affordable motorcycle transport.</p>
+      </div>
+      <div class="card" id="bicycle">
+        <img src="https://via.placeholder.com/400x200?text=Bicycle+Taxi" alt="Bicycle"/>
+        <h3>Abanyonzi</h3>
+        <p>Eco-friendly bicycle taxi services.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Art & Furniture -->
+  <section id="art" class="section">
+    <h2>Art & Furniture</h2>
+    <div class="cards">
+      <div class="card" id="painting">
+        <img src="https://via.placeholder.com/400x200?text=Local+Art" alt="Art"/>
+        <h3>Local Painting</h3>
+        <p>Handmade artwork from local artists.</p>
+      </div>
+      <div class="card" id="furniture">
+        <img src="https://via.placeholder.com/400x200?text=Wooden+Furniture" alt="Furniture"/>
+        <h3>Wooden Sofa</h3>
+        <p>Stylish and durable wooden furniture.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Jobs -->
+  <section id="jobs" class="section">
+    <h2>Job Vacancies</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://via.placeholder.com/400x200?text=Job+Vacancy" alt="Job"/>
+        <h3>Accountant Vacancy</h3>
+        <p>Join a growing company as a professional accountant.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sports -->
+  <section id="sports" class="section">
+    <h2>Sports</h2>
+    <div class="cards">
+      <div class="card" id="football">
+        <img src="https://via.placeholder.com/400x200?text=Football+Training" alt="Football"/>
+        <h3>Youth Football Training</h3>
+        <p>Professional football coaching for youth.</p>
+      </div>
+      <div class="card" id="gym">
+        <img src="https://via.placeholder.com/400x200?text=Gym+Membership" alt="Gym"/>
+        <h3>Gym Subscription</h3>
+        <p>Access modern gym equipment and trainers.</p>
+      </div>
+      <div class="card" id="swimming">
+        <img src="https://via.placeholder.com/400x200?text=Swimming+Lessons" alt="Swimming"/>
+        <h3>Swimming Lessons</h3>
+        <p>Learn swimming with certified trainers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="section">
+    <h2>Education</h2>
+    <div class="cards">
+      <div class="card" id="driving-school">
+        <img src="https://via.placeholder.com/400x200?text=Driving+School" alt="Driving"/>
+        <h3>Driving School</h3>
+        <p>Learn to drive with expert instructors.</p>
+      </div>
+      <div class="card" id="private-school">
+        <img src="https://via.placeholder.com/400x200?text=Private+School" alt="School"/>
+        <h3>Private School</h3>
+        <p>Enroll your children in quality education programs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>EAST VIRTUAL MARKET is your trusted online marketplace in East Africa, connecting customers with diverse services and products including shopping, real estate, personal services, transport, education, sports, and more.</p>
+  </section>
+
+  <!-- Contact Us -->
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Email: info@eastvirtualmarket.com</p>
+    <p>Phone: +250 700 000 000</p>
+    <p>Location: Kigali, Rwanda</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 EAST VIRTUAL MARKET. All rights reserved.</p>
+  </footer>
+</body>
+</html>
